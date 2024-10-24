@@ -1,25 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Footer from './Component/Footer';
+import Winter from './Component/Winter';
+import Summer from './Component/Summer';
+import Spring from './Component/Spring';
+import Autumn from './Component/Autumn';
+import Home from './Component/Home';
 import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Footer />
+      <div>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/winter" element={<Winter />} />
+          <Route path="/summer" element={<Summer />} />
+          <Route path="/spring" element={<Spring />} />
+          <Route path="/autumn" element={<Autumn />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 
 export default App;
+
