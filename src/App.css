@@ -1,104 +1,201 @@
-  body{
+/* General Reset */
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-.footer{
-  height: 60px;
-  width: 100%;
-  background-color: black;
-  color:orange;
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-  padding-bottom:10px;
-  border: 2px solid orange;
 
-  
-  
+body {
+  font-family: Arial, sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+
 }
-ul{
+
+/* Footer Styles */
+.footer {
+  background-color: #0a0a0a;
+  color: #f9a825;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-top: 4px solid #f9a825;
+}
+
+.footer ul {
   display: flex;
   list-style: none;
   gap: 20px;
-  
 }
-a{
+
+.footer a {
   text-decoration: none;
-  color: orange;
+  color: #f9a825;
+  font-weight: bold;
   transition: color 0.3s ease;
 }
-a:hover {
-  color: white; 
-}
-li {
-  font-size: 18px;
-  font-weight: bold;
+
+.footer a:hover {
+  color: #ffffff;
 }
 
-.Winter img{
-  height: 35vh;
-  width: 23vw;
+/* Winter Section */
+.Winter {
+  background-color: #064848;
+  padding: 50px 20px;
+}
+
+.Winter img {
+  height: 300px;
+  width: 220px;
   border-radius: 10px;
-  position: relative;
-  left: 50px;
-  top: 50px;
-  
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
-.winter-box{
+
+.winter-box {
   display: flex;
-  justify-content: space-around;
-  position: relative;
-  top: 50px;
-  margin-bottom: 30px;
-  
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-top: 20px;
 }
 
-
-.image{
-  height: 45vh;
-  width: 28vw;
-  background-color: rgb(240, 240, 246);
-  margin-bottom: 30px;
+.image {
+  background-color: #e0f2f1;
   border-radius: 15px;
-}
-
-
-.Home_main {
-  height: 37vh; 
-  background-size: cover; 
-  background-position: center; 
-  justify-content: center; 
-  align-items: center; 
-  text-align: center; 
-  position: relative; 
-  padding: 250px; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
-  
-}
-h1{
-  font-size: 40px;
-  height: 7vh;
-  border: 2px solid rgb(125, 123, 123);
-  width: 40vw;
-  position: relative;
-  left: 200px;
-  border-radius: 15px;
-  background-color: rgba(82, 76, 76, 0.2);
-  color: rgb(241, 240, 245);
-}
-h3{
-  font-size: 30px;
-  height: 12vh;
-  border: 2px solid rgb(55, 47, 47);
-  width: 60vw;
-  position: relative;
-  left: 90px;
-  border-radius: 15px;
-  background-color: rgba(86, 80, 80, 0.2);
-  color: rgb(20, 25, 28);
+  padding: 20px;
 }
 
-.Winter{
-  background-color: rgb(7, 66, 66);
-} 
+/* Home Section */
+.Home_main {
+  background: linear-gradient(to right, #064848, #0a0a0a); /* Smooth gradient background */
+  color: #ffffff; /* White text for readability */
+  padding: 150px 20px; /* Spacing inside the container */
+  text-align: center; /* Center align text */
+  position: relative; /* For future positioning if needed */
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Vertically center content */
+  align-items: center; /* Horizontally center content */
+}
+
+/* Heading 1 */
+.Home_main h1 {
+  font-size: 3rem; /* Large font size for main heading */
+  font-weight: bold; /* Make text bold */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  padding: 15px 25px; /* Add padding for better spacing */
+  border-radius: 10px; /* Smooth rounded corners */
+  margin-bottom: 20px; /* Space below h1 */
+  border: 2px solid #ffffff; /* White border for a polished look */
+  display: inline-block; /* Ensure proper spacing */
+  line-height: 1.5; /* Improve readability */
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Subheading (h3) */
+.Home_main h3 {
+  font-size: 1.8rem; /* Slightly smaller font for subheading */
+  font-weight: normal; /* Normal weight for subheading */
+  margin-top: 10px; /* Space above h3 */
+  padding: 15px 25px; /* Consistent padding */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border: 2px solid #ffffff; /* White border for uniformity */
+  border-radius: 10px; /* Smooth rounded corners */
+  display: inline-block; /* Proper layout */
+  line-height: 1.5; /* Spacing between lines */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for effect */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .Home_main h1 {
+    font-size: 2.5rem; /* Adjust size for tablets */
+    padding: 10px 20px;
+  }
+
+  .Home_main h3 {
+    font-size: 1.5rem;
+    padding: 10px 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Home_main h1 {
+    font-size: 2rem; /* Further reduce size for mobile devices */
+  }
+
+  .Home_main h3 {
+    font-size: 1.2rem;
+  }
+}
+
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .Winter img {
+    height: 250px;
+    width: 200px;
+  }
+
+  .Home_main h1 {
+    font-size: 2.5rem;
+  }
+
+  .Home_main h3 {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .Winter img {
+    height: 200px;
+    width: 180px;
+  }
+
+  .Home_main {
+    padding: 100px 10px;
+  }
+
+  .Home_main h1 {
+    font-size: 2rem;
+  }
+
+  .Home_main h3 {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Winter img {
+    height: 150px;
+    width: 140px;
+  }
+
+  .Home_main {
+    padding: 50px 10px;
+  }
+
+  .Home_main h1 {
+    font-size: 1.5rem;
+  }
+
+  .Home_main h3 {
+    font-size: 0.875rem;
+  }
+}
+
+
